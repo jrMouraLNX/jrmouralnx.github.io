@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elias Moura Junior | Cybersecurity Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, #0d1117, #111827, #1f2937);
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      color: #c9d1d9;
+    }
+
+    .btn {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 12px 25px;
+      border: 2px solid #00ff88;
+      color: #00ff88;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00ff88;
+      color: #000;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #00ff88;
+      border-left: 5px solid #00ff88;
+      padding-left: 15px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      align-items: center;
+    }
+
+    .card {
+      background: #161b22;
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.3s;
+      border: 1px solid #30363d;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #00ff88;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-box {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #30363d;
+    }
+
+    .labs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .lab-card {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #30363d;
+      transition: 0.3s;
+    }
+
+    .lab-card:hover {
+      border-color: #00ff88;
+      transform: scale(1.02);
+    }
+
+    .lab-card h3 {
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111827;
+      color: #9ca3af;
+    }
+
+    .terminal {
+      margin-top: 20px;
+      background: #000;
+      padding: 15px;
+      border-radius: 10px;
+      color: #00ff88;
+      font-family: monospace;
+      min-height: 120px;
+      box-shadow: 0 0 15px rgba(0,255,136,0.2);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background: #00ff88;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Elias Moura Junior</h1>
+    <p>
+      Estudante de Redes focado em Cibersegurança, explorando análise de redes,
+      reconhecimento, serviços vulneráveis, Linux, Termux e laboratórios práticos.
+    </p>
+
+    <a href="#labs" class="btn">Ver Laboratórios</a>
+
+    <div class="terminal" id="terminal"></div>
+  </header>
+
+  <section>
+    <h2 class="title">Sobre Mim</h2>
+
+    <div class="about">
+      <div class="card">
+        <h3>Minha Jornada</h3>
+        <p>
+          Sou apaixonado por tecnologia, redes e segurança digital.
+          Atualmente estudo fundamentos de redes, Linux, análise de vulnerabilidades
+          e técnicas de reconhecimento para desenvolvimento profissional em Cybersecurity.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Objetivo</h3>
+        <p>
+          Meu objetivo é evoluir constantemente na área de segurança ofensiva,
+          laboratório virtual e análise de sistemas, construindo projetos e experiências reais.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Habilidades</h2>
+
+    <div class="skills">
+      <div class="skill-box">
+        <h3>Redes</h3>
+        <p>TCP/IP, portas, protocolos e análise de rede.</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Linux</h3>
+        <p>Uso de terminal, comandos e ambiente Linux.</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Nmap</h3>
+        <p>Mapeamento de rede e enumeração de serviços.</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Cybersecurity</h3>
+        <p>Estudos em reconhecimento, vulnerabilidades e segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="labs">
+    <h2 class="title">Laboratórios</h2>
+
+    <div class="labs">
+      <div class="lab-card">
+        <h3>Laboratório Nmap</h3>
+        <p>
+          Testes de varredura de portas e identificação de serviços em ambiente controlado.
+        </p>
+      </div>
+
+      <div class="lab-card">
+        <h3>Mini Lab no Termux</h3>
+        <p>
+          Ambiente de testes utilizando Termux para prática de comandos Linux e ferramentas de rede.
+        </p>
+      </div>
+
+      <div class="lab-card">
+        <h3>Análise de Serviços</h3>
+        <p>
+          Estudos sobre serviços vulneráveis, versões antigas e superfície de ataque.
+        </p>
+      </div>
+
+      <div class="lab-card">
+        <h3>Reconhecimento de Rede</h3>
+        <p>
+          Coleta de informações e identificação de hosts e portas em laboratório.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 - Elias Moura Junior | Cybersecurity Portfolio</p>
+  </footer>
+
+  <script>
+    const text = [
+      'Initializing cybersecurity portfolio...',
+      'Loading network labs...',
+      'Scanning knowledge base...',
+      'Access Granted.'
+    ];
+
+    const terminal = document.getElementById('terminal');
+
+    let line = 0;
+    let char = 0;
+
+    function typeEffect() {
+      if (line < text.length) {
+        if (char < text[line].length) {
+          terminal.innerHTML += text[line].charAt(char);
+          char++;
+          setTimeout(typeEffect, 40);
+        } else {
+          terminal.innerHTML += '<br>';
+          line++;
+          char = 0;
+          setTimeout(typeEffect, 500);
+        }
+      } else {
+        terminal.innerHTML += '<span class="cursor"></span>';
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
