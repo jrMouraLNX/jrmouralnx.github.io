@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -35,6 +34,7 @@
       font-size: 3rem;
       color: #00ff88;
       margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
     }
 
     header p {
@@ -43,20 +43,42 @@
       color: #c9d1d9;
     }
 
-    .btn {
+    /* Container para alinhar os botões do topo lado a lado */
+    .header-buttons {
       margin-top: 25px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
       display: inline-block;
       padding: 12px 25px;
       border: 2px solid #00ff88;
       color: #00ff88;
       text-decoration: none;
       border-radius: 8px;
+      font-weight: bold;
       transition: 0.3s;
     }
 
     .btn:hover {
       background: #00ff88;
       color: #000;
+      box-shadow: 0 0 15px #00ff88;
+    }
+
+    /* Estilo customizado para o botão do WhatsApp se destacar sutilmente */
+    .btn-wsp {
+      border-color: #25d366;
+      color: #25d366;
+    }
+
+    .btn-wsp:hover {
+      background: #25d366;
+      color: #000;
+      box-shadow: 0 0 15px #25d366;
     }
 
     section {
@@ -87,8 +109,9 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-5px);
       border-color: #00ff88;
+      box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
     }
 
     .skills {
@@ -103,6 +126,11 @@
       border-radius: 12px;
       text-align: center;
       border: 1px solid #30363d;
+      transition: 0.3s;
+    }
+    
+    .skill-box:hover {
+      border-color: #00ff88;
     }
 
     .labs {
@@ -122,6 +150,7 @@
     .lab-card:hover {
       border-color: #00ff88;
       transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
     }
 
     .lab-card h3 {
@@ -129,22 +158,48 @@
       margin-bottom: 10px;
     }
 
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: #c9d1d9;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00ff88;
+    }
+
+    /* Cor de destaque para o link do WhatsApp no rodapé */
+    .social-links a.wsp-link:hover {
+      color: #25d366;
+    }
+
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 40px;
       background: #111827;
       color: #9ca3af;
+      border-top: 1px solid #30363d;
     }
 
     .terminal {
-      margin-top: 20px;
+      margin-top: 25px;
       background: #000;
       padding: 15px;
       border-radius: 10px;
       color: #00ff88;
       font-family: monospace;
       min-height: 120px;
-      box-shadow: 0 0 15px rgba(0,255,136,0.2);
+      width: 100%;
+      max-width: 600px;
+      text-align: left;
+      box-shadow: 0 0 15px rgba(0,255,136,0.15);
+      border: 1px solid #1f2937;
     }
 
     .cursor {
@@ -155,19 +210,13 @@
     }
 
     @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+      50% { opacity: 0; }
     }
 
     @media(max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .header-buttons { flex-direction: column; width: 100%; max-width: 300px; }
     }
   </style>
 </head>
@@ -176,93 +225,92 @@
   <header>
     <h1>Elias Moura Junior</h1>
     <p>
-      Estudante de Redes focado em Cibersegurança, explorando análise de redes,
-      reconhecimento, serviços vulneráveis, Linux, Termux e laboratórios práticos.
+      Estudante de Redes focado em Cibersegurança, explorando análise de tráfego, 
+      defesa de perímetros, Linux e simulação de laboratórios práticos.
     </p>
 
-    <a href="#labs" class="btn">Ver Laboratórios</a>
+    <!-- Botões agrupados lado a lado -->
+    <div class="header-buttons">
+      <a href="#labs" class="btn">Explorar Laboratórios</a>
+      <!-- Link atualizado com o número correto -->
+      <a href="https://wa.me/5521980170567?text=Ol%C3%A1%20Elias%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%2F" target="_blank" class="btn btn-wsp">Entrar em Contato</a>
+    </div>
 
-    <div class="terminal" id="terminal"></div>
+    <div class="terminal" id="terminal" aria-live="polite"></div>
   </header>
 
   <section>
     <h2 class="title">Sobre Mim</h2>
-
     <div class="about">
       <div class="card">
         <h3>Minha Jornada</h3>
         <p>
-          Sou apaixonado por tecnologia, redes e segurança digital.
-          Atualmente estudo fundamentos de redes, Linux, análise de vulnerabilidades
-          e técnicas de reconhecimento para desenvolvimento profissional em Cybersecurity.
+          Focado em entender o "coração" da tecnologia: as Redes de Computadores. 
+          Dedico meus estudos a dominar a pilha TCP/IP, mapeamento de ativos e o modelo OSI, 
+          construindo uma base sólida para a transição para a área de Segurança da Informação.
         </p>
       </div>
 
       <div class="card">
         <h3>Objetivo</h3>
         <p>
-          Meu objetivo é evoluir constantemente na área de segurança ofensiva,
-          laboratório virtual e análise de sistemas, construindo projetos e experiências reais.
+          Evoluir constantemente na análise de vulnerabilidades, configurações seguras de sistemas 
+          e entendimento de superfícies de ataque, documentando práticas reais através de laboratórios controlados.
         </p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2 class="title">Habilidades</h2>
-
+    <h2 class="title">Habilidades Técnicas</h2>
     <div class="skills">
       <div class="skill-box">
-        <h3>Redes</h3>
-        <p>TCP/IP, portas, protocolos e análise de rede.</p>
+        <h3>Redes de Computadores</h3>
+        <p>Arquitetura TCP/IP, análise de portas e funcionamento de protocolos (DHCP, DNS, HTTP).</p>
       </div>
-
       <div class="skill-box">
-        <h3>Linux</h3>
-        <p>Uso de terminal, comandos e ambiente Linux.</p>
+        <h3>Sistemas Linux</h3>
+        <p>Operação via CLI, gerenciamento de permissões e administração básica de sistemas.</p>
       </div>
-
       <div class="skill-box">
-        <h3>Nmap</h3>
-        <p>Mapeamento de rede e enumeração de serviços.</p>
+        <h3>Análise com Nmap</h3>
+        <p>Varreduras de segurança, identificação de serviços (Banner Grabbing) e scripts NSE.</p>
       </div>
-
       <div class="skill-box">
-        <h3>Cybersecurity</h3>
-        <p>Estudos em reconhecimento, vulnerabilidades e segurança.</p>
+        <h3>Ferramentas de Análise</h3>
+        <p>Estudos práticos voltados para Wireshark, Termux e resolução de desafios no TryHackMe.</p>
       </div>
     </div>
   </section>
 
   <section id="labs">
-    <h2 class="title">Laboratórios</h2>
-
+    <h2 class="title">Laboratórios Práticos</h2>
     <div class="labs">
       <div class="lab-card">
-        <h3>Laboratório Nmap</h3>
+        <h3>Análise de Redes & Nmap</h3>
         <p>
-          Testes de varredura de portas e identificação de serviços em ambiente controlado.
+          Mapeamento de hosts ativos e enumeração de serviços em ambientes virtuais controlados (Metasploitable), com foco em identificar superfícies de ataque.
         </p>
       </div>
 
       <div class="lab-card">
-        <h3>Mini Lab no Termux</h3>
+        <h3>Laboratório Mobile (Termux)</h3>
         <p>
-          Ambiente de testes utilizando Termux para prática de comandos Linux e ferramentas de rede.
+          Estruturação de um mini ambiente de testes portátil utilizando CLI Linux para automação de scripts básicos e checagem de conectividade de rede.
         </p>
       </div>
 
       <div class="lab-card">
-        <h3>Análise de Serviços</h3>
+        <h3>Inspeção de Protocolos</h3>
         <p>
-          Estudos sobre serviços vulneráveis, versões antigas e superfície de ataque.
+          Monitoramento e captura de pacotes para entender na prática a troca de mensagens de protocolos essenciais como DHCP e requisições DNS.
         </p>
       </div>
 
       <div class="lab-card">
-        <h3>Reconhecimento de Rede</h3>
+        <h3>Hardening & Defesa Básica</h3>
         <p>
-          Coleta de informações e identificação de hosts e portas em laboratório.
+          Estudo focado na identificação de configurações frágeis, softwares desatualizados (backdoors potenciais) e mitigação de riscos em serviços comuns.
         </p>
       </div>
     </div>
@@ -270,18 +318,23 @@
 
   <footer>
     <p>© 2026 - Elias Moura Junior | Cybersecurity Portfolio</p>
+    <div class="social-links">
+      <a href="https://instagram.com/juniormouraelias.ciber" target="_blank">Instagram</a> | 
+      <!-- Link do WhatsApp atualizado no rodapé -->
+      <a href="https://wa.me/5521980170567?text=Ol%C3%A1%20Elias%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%2F" target="_blank" class="wsp-link">WhatsApp</a> | 
+      <a href="mailto:juniormouraelias@gmail.com">Contato</a>
+    </div>
   </footer>
 
   <script>
     const text = [
       'Initializing cybersecurity portfolio...',
       'Loading network labs...',
-      'Scanning knowledge base...',
+      'Analyzing TCP/IP & Nmap configs...',
       'Access Granted.'
     ];
 
     const terminal = document.getElementById('terminal');
-
     let line = 0;
     let char = 0;
 
@@ -290,12 +343,12 @@
         if (char < text[line].length) {
           terminal.innerHTML += text[line].charAt(char);
           char++;
-          setTimeout(typeEffect, 40);
+          setTimeout(typeEffect, 30);
         } else {
           terminal.innerHTML += '<br>';
           line++;
           char = 0;
-          setTimeout(typeEffect, 500);
+          setTimeout(typeEffect, 400);
         }
       } else {
         terminal.innerHTML += '<span class="cursor"></span>';
