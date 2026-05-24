@@ -3,360 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elias Moura Junior | Cybersecurity Portfolio</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #0d1117;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      background: linear-gradient(135deg, #0d1117, #111827, #1f2937);
-      padding: 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: #00ff88;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      color: #c9d1d9;
-    }
-
-    /* Container para alinhar os botões do topo lado a lado */
-    .header-buttons {
-      margin-top: 25px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      border: 2px solid #00ff88;
-      color: #00ff88;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #00ff88;
-      color: #000;
-      box-shadow: 0 0 15px #00ff88;
-    }
-
-    /* Estilo customizado para o botão do WhatsApp se destacar sutilmente */
-    .btn-wsp {
-      border-color: #25d366;
-      color: #25d366;
-    }
-
-    .btn-wsp:hover {
-      background: #25d366;
-      color: #000;
-      box-shadow: 0 0 15px #25d366;
-    }
-
-    section {
-      padding: 80px 10%;
-    }
-
-    .title {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #00ff88;
-      border-left: 5px solid #00ff88;
-      padding-left: 15px;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      align-items: center;
-    }
-
-    .card {
-      background: #161b22;
-      padding: 25px;
-      border-radius: 15px;
-      transition: 0.3s;
-      border: 1px solid #30363d;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #00ff88;
-      box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .skill-box {
-      background: #161b22;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      border: 1px solid #30363d;
-      transition: 0.3s;
-    }
-    
-    .skill-box:hover {
-      border-color: #00ff88;
-    }
-
-    .labs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .lab-card {
-      background: #161b22;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #30363d;
-      transition: 0.3s;
-    }
-
-    .lab-card:hover {
-      border-color: #00ff88;
-      transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
-    }
-
-    .lab-card h3 {
-      color: #00ff88;
-      margin-bottom: 10px;
-    }
-
-    .social-links {
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      color: #c9d1d9;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      color: #00ff88;
-    }
-
-    /* Cor de destaque para o link do WhatsApp no rodapé */
-    .social-links a.wsp-link:hover {
-      color: #25d366;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      background: #111827;
-      color: #9ca3af;
-      border-top: 1px solid #30363d;
-    }
-
-    .terminal {
-      margin-top: 25px;
-      background: #000;
-      padding: 15px;
-      border-radius: 10px;
-      color: #00ff88;
-      font-family: monospace;
-      min-height: 120px;
-      width: 100%;
-      max-width: 600px;
-      text-align: left;
-      box-shadow: 0 0 15px rgba(0,255,136,0.15);
-      border: 1px solid #1f2937;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      background: #00ff88;
-      animation: blink 0.7s infinite;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    @media(max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      .header-buttons { flex-direction: column; width: 100%; max-width: 300px; }
-    }
-  </style>
+  <title>Elias Moura Junior| Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <div class="background-grid"></div>
+
   <header>
-    <h1>Elias Moura Junior</h1>
-    <p>
-      Estudante de Redes focado em Cibersegurança, explorando análise de tráfego, 
-      defesa de perímetros, Linux e simulação de laboratórios práticos.
-    </p>
+    <nav>
+      <h1 class="logo">ELIAS<span>SEC</span></h1>
 
-    <!-- Botões agrupados lado a lado -->
-    <div class="header-buttons">
-      <a href="#labs" class="btn">Explorar Laboratórios</a>
-      <!-- Link atualizado com o número correto -->
-      <a href="https://wa.me/5521980170567?text=Ol%C3%A1%20Elias%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%2F" target="_blank" class="btn btn-wsp">Entrar em Contato</a>
-    </div>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#labs">Labs</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#soc">SOC</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
 
-    <div class="terminal" id="terminal" aria-live="polite"></div>
+      <button id="themeBtn">☀️</button>
+    </nav>
   </header>
 
-  <section>
-    <h2 class="title">Sobre Mim</h2>
-    <div class="about">
-      <div class="card">
-        <h3>Minha Jornada</h3>
-        <p>
-          Focado em entender o "coração" da tecnologia: as Redes de Computadores. 
-          Dedico meus estudos a dominar a pilha TCP/IP, mapeamento de ativos e o modelo OSI, 
-          construindo uma base sólida para a transição para a área de Segurança da Informação.
-        </p>
+  <section class="hero">
+    <div class="hero-content reveal">
+      <p class="small-text">PORTFÓLIO DE CIBERSEGURANÇA</p>
+
+      <h2>
+        SOC Junior <br>
+        & Estudante de Redes
+      </h2>
+
+      <p class="description">
+        Explorando redes, análise de tráfego, monitoramento de eventos e segurança ofensiva.
+        Construindo laboratórios, estudando SOC e evoluindo diariamente na área de Cybersecurity.
+      </p>
+
+      <div class="buttons">
+        <a href="#labs" class="btn primary">Ver Labs</a>
+        <a href="#contato" class="btn secondary">Contato</a>
+      </div>
+    </div>
+
+    <div class="terminal-card reveal">
+      <div class="terminal-top">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="card">
-        <h3>Objetivo</h3>
-        <p>
-          Evoluir constantemente na análise de vulnerabilidades, configurações seguras de sistemas 
-          e entendimento de superfícies de ataque, documentando práticas reais através de laboratórios controlados.
-        </p>
+      <div class="terminal-body">
+<pre>
+$ whoami
+Elias Moura Junior
+
+$ skills --list
+> Linux
+> Redes
+> Nmap
+> Wireshark
+> SOC Monitoring
+> Cybersecurity Labs
+
+$ status
+[+] Aprendendo continuamente...
+</pre>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2 class="title">Habilidades Técnicas</h2>
-    <div class="skills">
-      <div class="skill-box">
-        <h3>Redes de Computadores</h3>
-        <p>Arquitetura TCP/IP, análise de portas e funcionamento de protocolos (DHCP, DNS, HTTP).</p>
+  <section id="sobre" class="section reveal">
+    <h3>Sobre Mim</h3>
+
+    <p>
+      Sou estudante de Redes e Cibersegurança, focado em evolução prática através de laboratórios,
+      análise de rede e estudos voltados para SOC (Security Operations Center).
+      Meu objetivo é crescer como analista de segurança, aprendendo monitoramento, detecção,
+      resposta a incidentes e segurança ofensiva.
+    </p>
+  </section>
+
+  <section id="labs" class="section reveal">
+    <h3>Cyber Labs</h3>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🛰️</div>
+        <h4>Reconhecimento de Rede</h4>
+        <p>
+          Scans com Nmap para descoberta de hosts, portas e serviços em ambientes locais.
+        </p>
       </div>
-      <div class="skill-box">
-        <h3>Sistemas Linux</h3>
-        <p>Operação via CLI, gerenciamento de permissões e administração básica de sistemas.</p>
+
+      <div class="card">
+        <div class="icon">📡</div>
+        <h4>Análise de Tráfego</h4>
+        <p>
+          Captura e análise de pacotes utilizando Wireshark e Tshark.
+        </p>
       </div>
-      <div class="skill-box">
-        <h3>Análise com Nmap</h3>
-        <p>Varreduras de segurança, identificação de serviços (Banner Grabbing) e scripts NSE.</p>
+
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h4>Estudos SOC</h4>
+        <p>
+          Monitoramento de eventos, análise de logs e introdução a resposta a incidentes.
+        </p>
       </div>
-      <div class="skill-box">
-        <h3>Ferramentas de Análise</h3>
-        <p>Estudos práticos voltados para Wireshark, Termux e resolução de desafios no TryHackMe.</p>
+
+      <div class="card">
+        <div class="icon">🐧</div>
+        <h4>Linux & Termux</h4>
+        <p>
+          Experimentos de segurança utilizando Linux e ambiente mobile com Termux.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills" class="section reveal">
+    <h3>Skills</h3>
+
+    <div class="skills-grid">
+      <div class="skill-item">
+        <span>Linux</span>
+        <div class="bar"><div style="width: 85%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <span>Redes</span>
+        <div class="bar"><div style="width: 80%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <span>Nmap</span>
+        <div class="bar"><div style="width: 75%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <span>Wireshark</span>
+        <div class="bar"><div style="width: 70%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <span>SOC</span>
+        <div class="bar"><div style="width: 65%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <span>Cyber Labs</span>
+        <div class="bar"><div style="width: 88%"></div></div>
       </div>
     </div>
   </section>
 
-  <section id="labs">
-    <h2 class="title">Laboratórios Práticos</h2>
-    <div class="labs">
-      <div class="lab-card">
-        <h3>Análise de Redes & Nmap</h3>
-        <p>
-          Mapeamento de hosts ativos e enumeração de serviços em ambientes virtuais controlados (Metasploitable), com foco em identificar superfícies de ataque.
-        </p>
-      </div>
+  <section id="soc" class="section reveal">
+    <h3>Objetivo Profissional</h3>
 
-      <div class="lab-card">
-        <h3>Laboratório Mobile (Termux)</h3>
-        <p>
-          Estruturação de um mini ambiente de testes portátil utilizando CLI Linux para automação de scripts básicos e checagem de conectividade de rede.
-        </p>
-      </div>
+    <div class="soc-box">
+      <p>
+        Busco oportunidade como <strong>SOC Junior</strong> para desenvolver experiência prática
+        em monitoramento, análise de eventos, investigação de incidentes e defesa de ambientes.
+      </p>
 
-      <div class="lab-card">
-        <h3>Inspeção de Protocolos</h3>
-        <p>
-          Monitoramento e captura de pacotes para entender na prática a troca de mensagens de protocolos essenciais como DHCP e requisições DNS.
-        </p>
-      </div>
+      <p>
+        Atualmente focado em:
+      </p>
 
-      <div class="lab-card">
-        <h3>Hardening & Defesa Básica</h3>
-        <p>
-          Estudo focado na identificação de configurações frágeis, softwares desatualizados (backdoors potenciais) e mitigação de riscos em serviços comuns.
-        </p>
-      </div>
+      <ul>
+        <li>Monitoramento de rede</li>
+        <li>Análise de logs</li>
+        <li>Fundamentos de SIEM</li>
+        <li>Segurança ofensiva e defensiva</li>
+        <li>Networking & Linux</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contato" class="section reveal">
+    <h3>Contato</h3>
+
+    <div class="contact-box">
+      <p>📧 Juniormouraelias@gmail.com</p>
+      <p>💻 GitHub: jrmouralnx.github.io</p>
+      <p>🔗 LinkedIn:www.linkedin.com/in/
+elias-moura-894870221</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 - Elias Moura Junior | Cybersecurity Portfolio</p>
-    <div class="social-links">
-      <a href="https://instagram.com/juniormouraelias.ciber" target="_blank">Instagram</a> | 
-      <!-- Link do WhatsApp atualizado no rodapé -->
-      <a href="https://wa.me/5521980170567?text=Ol%C3%A1%20Elias%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%2F" target="_blank" class="wsp-link">WhatsApp</a> | 
-      <a href="mailto:juniormouraelias@gmail.com">Contato</a>
-    </div>
+    <p>© 2026 - Elias Moura | Cybersecurity Portfolio</p>
   </footer>
 
-  <script>
-    const text = [
-      'Initializing cybersecurity portfolio...',
-      'Loading network labs...',
-      'Analyzing TCP/IP & Nmap configs...',
-      'Access Granted.'
-    ];
-
-    const terminal = document.getElementById('terminal');
-    let line = 0;
-    let char = 0;
-
-    function typeEffect() {
-      if (line < text.length) {
-        if (char < text[line].length) {
-          terminal.innerHTML += text[line].charAt(char);
-          char++;
-          setTimeout(typeEffect, 30);
-        } else {
-          terminal.innerHTML += '<br>';
-          line++;
-          char = 0;
-          setTimeout(typeEffect, 400);
-        }
-      } else {
-        terminal.innerHTML += '<span class="cursor"></span>';
-      }
-    }
-
-    typeEffect();
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
